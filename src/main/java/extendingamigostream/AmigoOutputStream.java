@@ -3,46 +3,47 @@ package extendingamigostream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-    public class AmigoOutputStream extends FileOutputStream {
 
-        public static String fileName = "C:/tmp/result.txt";
+public class AmigoOutputStream extends FileOutputStream {
 
-        FileOutputStream fileOutputStream;
+    public static String fileName = "C:/tmp/result.txt";
 
-        public AmigoOutputStream(FileOutputStream fileOutputStream) throws FileNotFoundException {
-            super(fileName);
-            this.fileOutputStream = fileOutputStream;
-        }
+    FileOutputStream fileOutputStream;
 
-        public static void main(String[] args) throws FileNotFoundException {
-            new extendingamigostream.AmigoOutputStream(new FileOutputStream(fileName));
-        }
-
-        @Override
-        public void write(int b) throws IOException {
-            fileOutputStream.write(b);
-        }
-
-        @Override
-        public void write(byte[] b) throws IOException {
-            fileOutputStream.write(b);
-        }
-
-        @Override
-        public void write(byte[] b, int off, int len) throws IOException {
-            fileOutputStream.write(b, off, len);
-        }
-
-        @Override
-        public void flush() throws IOException {
-            fileOutputStream.flush();
-        }
-
-        @Override
-        public void close() throws IOException {
-            flush();
-            write("CodeGym © All rights reserved.".getBytes());
-            fileOutputStream.close();
-        }
-
+    public AmigoOutputStream(FileOutputStream fileOutputStream) throws FileNotFoundException {
+        super(fileName);
+        this.fileOutputStream = fileOutputStream;
     }
+
+    public static void main(String[] args) throws FileNotFoundException {
+        new extendingamigostream.AmigoOutputStream(new FileOutputStream(fileName));
+    }
+
+    @Override
+    public void write(int b) throws IOException {
+        fileOutputStream.write(b);
+    }
+
+    @Override
+    public void write(byte[] b) throws IOException {
+        fileOutputStream.write(b);
+    }
+
+    @Override
+    public void write(byte[] b, int off, int len) throws IOException {
+        fileOutputStream.write(b, off, len);
+    }
+
+    @Override
+    public void flush() throws IOException {
+        fileOutputStream.flush();
+    }
+
+    @Override
+    public void close() throws IOException {
+        flush();
+        write("CodeGym © All rights reserved.".getBytes());
+        fileOutputStream.close();
+    }
+
+}
