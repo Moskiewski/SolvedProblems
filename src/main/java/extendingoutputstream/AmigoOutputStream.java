@@ -8,6 +8,5 @@ public interface AmigoOutputStream {
     void write(int b) throws IOException;
     void write(byte [] b) throws IOException;
     void write(byte[] b, int off, int len) throws IOException;
-
     void close() throws IOException;
 }
