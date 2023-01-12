@@ -2,7 +2,7 @@ package cat;
 
 public class CatWrapper extends Cat {
 
-    private Cat original;
+    private final Cat original;
 
     public CatWrapper(Cat cat) {
         super(cat.getName());

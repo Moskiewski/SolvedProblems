@@ -13,11 +13,10 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-
     }
 
     public static class IncomeDataAdapter implements Customer, Contact {
-        private IncomeData data;
+        private final IncomeData data;
 
         public IncomeDataAdapter(IncomeData data) {
             this.data = data;
@@ -36,7 +35,6 @@ public class Solution {
                     String.format("%010d", data.getPhoneNumber()).substring(6, 8),
                     String.format("%010d", data.getPhoneNumber()).substring(8));
         }
-
 
         @Override
         public String getCompanyName() {
