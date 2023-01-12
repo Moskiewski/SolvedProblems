@@ -3,7 +3,7 @@ package evencharacters;
 import java.io.*;
 import java.util.ArrayList;
 
-public class Solution {
+public class Main {
     public static void main(String[] args) throws IOException {
         String fileName1;
         String fileName2;
