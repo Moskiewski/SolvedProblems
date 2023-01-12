@@ -13,8 +13,8 @@ public class Main {
             fileName2 = bufferedReader.readLine();
         }
 
-        FileToArray fileToArray = new FileToArray();
-        ArrayList<Integer> list = fileToArray.getArrayFromFile(fileName1);
+        FileToArrayList fileToArrayList = new FileToArrayList();
+        ArrayList<Integer> list = fileToArrayList.getArrayFromFile(fileName1);
         FileSorting fileSorting = new FileSorting();
         fileSorting.fileSort(fileName2, list);
     }

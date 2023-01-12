@@ -4,7 +4,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class FileToArray {
+public class FileToArrayList {
 
     public ArrayList<Integer> getArrayFromFile(String fileName1) throws IOException {
         ArrayList<Integer> list = new ArrayList<>();
