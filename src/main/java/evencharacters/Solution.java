@@ -13,17 +13,9 @@ public class Solution {
             fileName2 = bufferedReader.readLine();
         }
 
-        ArrayList<Integer> list = new ArrayList<Integer>();
-        try (FileReader fileReader = new FileReader(fileName1)) {
-            while (fileReader.ready()) {
-                list.add(fileReader.read());
-            }
-        }
-
-        try (FileWriter fileWriter = new FileWriter(fileName2)) {
-            for (int i = 1; i < list.size(); i = i + 2) {
-                fileWriter.write((byte) (int) list.get(i));
-            }
-        }
+        FileToArray fileToArray = new FileToArray();
+        ArrayList<Integer> list = fileToArray.getArrayFromFile(fileName1);
+        FileSorting fileSorting = new FileSorting();
+        fileSorting.fileSort(fileName2, list);
     }
 }
