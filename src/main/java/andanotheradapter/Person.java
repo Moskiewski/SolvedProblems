@@ -4,10 +4,10 @@ import java.util.Date;
 
 public class Person {
 
-    private String lastName;
-    private String firstName;
-    private String middleName;
-    private Date birthDate;
+    private final String lastName;
+    private final String firstName;
+    private final String middleName;
+    private final Date birthDate;
 
     public Person(String lastName, String firstName, String middleName, Date birthDate) {
         this.lastName = lastName;
